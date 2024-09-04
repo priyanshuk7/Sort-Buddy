@@ -22,6 +22,7 @@ fun ScreenDemo(navController: NavController){
         }) {
             Text(text = "Visualize   >>")
         }
+        //new commit
 
         Button(onClick = { /*TODO*/ }) {
             Text(text="Know the basics   >>")
