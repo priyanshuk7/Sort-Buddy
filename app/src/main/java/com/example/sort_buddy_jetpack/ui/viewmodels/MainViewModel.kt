@@ -1,9 +1,8 @@
-package com.haiphong.algorithmsvisualizer.ui.viewmodels
+package com.example.sort_buddy_jetpack.ui.viewmodels
 
-import androidx.compose.foundation.layout.Box
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.haiphong.algorithmsvisualizer.data.model.Item
+import com.example.sort_buddy_jetpack.data.model.Item
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

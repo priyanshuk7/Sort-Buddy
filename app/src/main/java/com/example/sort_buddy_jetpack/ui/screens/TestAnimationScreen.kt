@@ -1,4 +1,4 @@
-package com.haiphong.algorithmsvisualizer.ui.screens
+package com.example.sort_buddy_jetpack.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColor
@@ -35,9 +35,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun TestAnimationScreen() {
-//    var isVisible by remember {
-//        mutableStateOf(false)
-//    }
+
 
     var isRound by remember {
         mutableStateOf(false)
@@ -48,24 +46,6 @@ fun TestAnimationScreen() {
             Text(text = "Toggle")
         }
 
-//        val borderRadius by animateIntAsState(
-//            targetValue = if (isRound) 40 else 10,
-//            label = "",
-//            animationSpec = spring(
-//                dampingRatio = Spring.DampingRatioHighBouncy,
-//                stiffness = Spring.StiffnessLow
-//            )
-//        )
-
-//        val transition = rememberInfiniteTransition(label = "")
-//        val color by transition.animateColor(
-//            initialValue = Color.Red,
-//            targetValue = Color.Blue,
-//            animationSpec = infiniteRepeatable(
-//                animation = tween(2000),
-//                repeatMode = RepeatMode.Reverse
-//            ), label = "color"
-//        )
 
         Spacer(modifier = Modifier.height(50.dp))
 
@@ -73,11 +53,6 @@ fun TestAnimationScreen() {
             modifier = Modifier
                 .size(200.dp)
         )
-//        AnimatedVisibility(visible = isVisible, enter = slideInHorizontally() + fadeIn(), modifier = Modifier.fillMaxSize()) {
-//            Box(
-//                modifier = Modifier
-//                    .border(5.dp, Color.DarkGray).background(Color.LightGray)
-//            )
-//        }
+
     }
 }

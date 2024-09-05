@@ -10,7 +10,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 import com.haiphong.algorithmsvisualizer.AlgorithmVisualizerApp
-import com.haiphong.algorithmsvisualizer.ui.screens.ScreenDemo
+import com.example.sort_buddy_jetpack.ui.screens.ScreenDemo
+import com.example.sort_buddy_jetpack.ui.screens.SortingListScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,9 @@ class MainActivity : ComponentActivity() {
                 }
                 composable("AlgorithmVisualizerApp"){
                     AlgorithmVisualizerApp()
+                }
+                composable("SortingListScreen"){
+                    SortingListScreen(navController)
                 }
             })
         }

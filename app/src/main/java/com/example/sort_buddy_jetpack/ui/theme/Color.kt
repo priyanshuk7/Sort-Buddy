@@ -1,4 +1,4 @@
-package com.haiphong.algorithmsvisualizer.ui.theme
+package com.example.sort_buddy_jetpack.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

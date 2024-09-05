@@ -1,4 +1,4 @@
-package com.haiphong.algorithmsvisualizer.data.model
+package com.example.sort_buddy_jetpack.data.model
 
 private fun getItemId(): String {
     val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')

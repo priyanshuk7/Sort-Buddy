@@ -5,8 +5,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.haiphong.algorithmsvisualizer.ui.screens.MainScreen
-import com.haiphong.algorithmsvisualizer.ui.screens.TestAnimationScreen
+import com.example.sort_buddy_jetpack.ui.screens.MainScreen
+import com.example.sort_buddy_jetpack.ui.screens.TestAnimationScreen
 
 enum class Route {
     Main,

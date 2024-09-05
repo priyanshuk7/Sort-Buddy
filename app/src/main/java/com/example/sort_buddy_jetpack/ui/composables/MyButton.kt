@@ -1,4 +1,4 @@
-package com.haiphong.algorithmsvisualizer.ui.composables
+package com.example.sort_buddy_jetpack.ui.composables
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CornerSize

@@ -1,6 +1,5 @@
-package com.haiphong.algorithmsvisualizer.ui.composables
+package com.example.sort_buddy_jetpack.ui.composables
 
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
@@ -12,7 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.haiphong.algorithmsvisualizer.data.model.Item
+import com.example.sort_buddy_jetpack.data.model.Item
 
 @Composable
 fun ListItem(item: Item, modifier: Modifier = Modifier) {
