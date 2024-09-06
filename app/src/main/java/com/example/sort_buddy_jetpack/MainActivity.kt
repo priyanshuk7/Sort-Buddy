@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "BubbleSortScreen", builder = {
+            NavHost(navController = navController, startDestination = "ScreenDemo", builder = {
                 composable("ScreenDemo"){
                     ScreenDemo(navController)
                 }

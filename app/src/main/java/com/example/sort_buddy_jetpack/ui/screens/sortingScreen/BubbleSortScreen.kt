@@ -1,5 +1,6 @@
 package com.example.sort_buddy_jetpack.ui.screens.sortingScreen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,22 +16,26 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.sort_buddy_jetpack.R
+import com.example.sort_buddy_jetpack.ui.theme.myGray
 
 
 @Composable
 fun BubbleSortScreen(navController: NavController){
     Column(modifier = Modifier.padding(20.dp)) {
         Text(text = "Bubble Sort", fontSize = 24.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top=20.dp))
-        Divider(modifier = Modifier.height(5.dp))
+        Divider(modifier = Modifier.height(5.dp), color = myGray)
         Spacer(modifier = Modifier.height(10.dp))
         val scrollState = rememberScrollState()
 
@@ -43,7 +48,29 @@ fun BubbleSortScreen(navController: NavController){
             Text(text= "In Bubble Sort algorithm : " , fontSize = 16.sp, fontWeight = FontWeight.Bold)
             Text(text = "1. traverse from left and compare adjacent elements and the higher one is placed at right side. \n" +
                     "2. In this way, the largest element is moved to the rightmost end at first. \n" +
-                    "3. This process is then continued to find the second largest and place it and so on until the data is sorted.", Modifier.padding(8.dp))
+                    "3. This process is then continued to find the second largest and place it and so on until the data is sorted.\n", Modifier.padding(8.dp))
+            Text(text= "Example : " , fontSize = 16.sp, fontWeight = FontWeight.Bold)
+            Text(text = "Consider an array [6, 0, 3, 5]")
+            Spacer(modifier = Modifier.height(5.dp))
+            Image(
+                painter = painterResource(id = R.drawable.bs_1),
+                contentDescription = "Pass 1",
+                modifier = Modifier.fillMaxSize(),
+                )
+            Spacer(modifier = Modifier.height(5.dp))
+            Image(
+                painter = painterResource(id = R.drawable.bs_2),
+                contentDescription = "Pass 1",
+                modifier = Modifier.fillMaxSize(),
+            )
+            Spacer(modifier = Modifier.height(5.dp))
+            Image(
+                painter = painterResource(id = R.drawable.bs_3),
+                contentDescription = "Pass 1",
+                modifier = Modifier.fillMaxSize(),
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            
             
             Text(text = "\nTotal no. of passes: n-1\n" +
                     "Total no. of comparisons: n*(n-1)/2\n", fontSize = 14.sp)
@@ -53,7 +80,7 @@ fun BubbleSortScreen(navController: NavController){
 
             Box(modifier = Modifier
                 .padding(8.dp)
-                .background(color = Color.Gray, shape = RoundedCornerShape(10.dp))
+                .background(color = myGray, shape = RoundedCornerShape(10.dp))
                 .fillMaxSize()
                 ) {
                     Text(text = "void bubbleSort(vector<int>& v) {\n" +
@@ -77,7 +104,7 @@ fun BubbleSortScreen(navController: NavController){
                             "}", modifier = Modifier
                                 .padding(15.dp), color = Color.White)
             }
-            Text(text = "\nTime Complexity: O(n2)\n" +
+            Text(text = "\nTime Complexity: O(n^2)\n" +
                     "Space Complexity: O (1)", fontSize = 14.sp, fontWeight = FontWeight.Bold)
 
             Spacer(modifier = Modifier.height(40.dp))

@@ -1,8 +1,10 @@
 package com.example.sort_buddy_jetpack.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -24,33 +26,41 @@ import androidx.navigation.NavController
 @Composable
 fun ScreenDemo(navController: NavController){
 
-    Column(Modifier.padding(20.dp)) {
+    Column(Modifier.padding(20.dp),
+        ) {
         Text(text = "Welcome to Sort Buddy! \nThis application helps user visualize various sorting algorithms.",
             Modifier.padding(start= 20.dp, end=20.dp, top=30.dp, bottom = 20.dp),
             fontSize = 16.sp)
-        Spacer(modifier = Modifier.height(60.dp))
-        Button(onClick = {
-            navController.navigate("AlgorithmVisualizerApp")
-        }, modifier = Modifier
-            .size(width= 300.dp, height = 80.dp)
-            .align(alignment = Alignment.CenterHorizontally),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C57FC)),
-            elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
-            shape = RoundedCornerShape(corner = CornerSize(22.dp)),
-        ) {
-            Text(text = "Visualize     >>", fontSize = 24.sp)
-        }
-        //new commit
-        Spacer(modifier = Modifier.height(40.dp))
-        Button(onClick = { navController.navigate("SortingListScreen") },
-            modifier = Modifier
-                .size(width= 300.dp, height = 80.dp)
-                .align(alignment = Alignment.CenterHorizontally),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C57FC)),
-            elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
-            shape = RoundedCornerShape(corner = CornerSize(22.dp)),
+
+        Column(horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxSize()) {
+            Button(
+                onClick = {
+                    navController.navigate("AlgorithmVisualizerApp")
+                },
+                modifier = Modifier
+                    .size(width = 300.dp, height = 80.dp)
+                    .align(alignment = Alignment.CenterHorizontally),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C57FC)),
+                elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
+                shape = RoundedCornerShape(corner = CornerSize(22.dp)),
             ) {
-            Text(text="Know the basics  >>", fontSize = 24.sp)
+                Text(text = "Visualize     >>", fontSize = 24.sp)
+            }
+            //new commit
+            Spacer(modifier = Modifier.height(40.dp))
+            Button(
+                onClick = { navController.navigate("SortingListScreen") },
+                modifier = Modifier
+                    .size(width = 300.dp, height = 80.dp)
+                    .align(alignment = Alignment.CenterHorizontally),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2C57FC)),
+                elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
+                shape = RoundedCornerShape(corner = CornerSize(22.dp)),
+            ) {
+                Text(text = "Know the basics  >>", fontSize = 24.sp)
+            }
         }
     }
 }

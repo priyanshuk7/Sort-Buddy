@@ -27,7 +27,7 @@ fun SortingListScreen(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { navController.navigate("BubbleSortScreen") },
             modifier = Modifier
                 .size(width= 300.dp, height = 80.dp)
                 .align(alignment = Alignment.CenterHorizontally),
@@ -39,7 +39,7 @@ fun SortingListScreen(navController: NavController){
         }
         Spacer(modifier = Modifier.height(40.dp))
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = {navController.navigate("SelectionSortScreen") },
             modifier = Modifier
                 .size(width= 300.dp, height = 80.dp)
                 .align(alignment = Alignment.CenterHorizontally),
@@ -51,7 +51,7 @@ fun SortingListScreen(navController: NavController){
         }
         Spacer(modifier = Modifier.height(40.dp))
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { navController.navigate("InsertionSortScreen") },
             modifier = Modifier
                 .size(width= 300.dp, height = 80.dp)
                 .align(alignment = Alignment.CenterHorizontally),
@@ -63,7 +63,7 @@ fun SortingListScreen(navController: NavController){
         }
         Spacer(modifier = Modifier.height(40.dp))
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { navController.navigate("QuickSortScreen") },
             modifier = Modifier
                 .size(width= 300.dp, height = 80.dp)
                 .align(alignment = Alignment.CenterHorizontally),
